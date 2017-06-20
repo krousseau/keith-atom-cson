@@ -19,11 +19,18 @@
 '.source.js':
   'React setState':
     'prefix': 'kr_ss'
-    'body': 'this.setState((prevState, props) => { $1 });'
+    'body': """
+    this.setState((state, props) => {
+      return {
+        $1
+      };
+    });
+    """
   'React class skeleton':
     'prefix': 'kr_rc'
     'body': """
     import React, { Component } from 'react';
+    import PropTypes from 'prop-types';
 
     export default class ${1:MyComponent} extends Component {
       render() {
@@ -36,6 +43,7 @@
     'prefix': 'kr_rfc'
     'body': """
     import React from 'react';
+    import PropTypes from 'prop-types';
 
     const ${1:MyComponent} = ({
     $2
@@ -49,7 +57,8 @@
   'React functional component (implicit)':
     'prefix': 'kr_rfci'
     'body': """
-      import React, { PropTypes } from 'react';
+      import React from 'react';
+      import PropTypes from 'prop-types';
 
       const ${1:MyComponent} = ({
         $2
@@ -57,6 +66,19 @@
       );
 
       export default ${1:MyComponent};
+    """
+  'React HOC':
+    'prefix': 'kr_hoc'
+    'body': """
+    import React, { Component, PropTypes } from "react";
+
+    function ${1:MyHOC}(WrappedComponent) {
+      return class ${2:HOC} extends Component {
+        render() {
+          return <WrappedComponent {...this.props} />;
+        }
+      };
+    }
     """
   'Promisify':
     'prefix': 'kr_prom'
