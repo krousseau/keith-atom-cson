@@ -69,7 +69,7 @@
 	"React HOC": {
 		"prefix": "kr_hoc",
 		"body": [
-			"import React from 'react';",
+			"import React, { Component } from 'react';",
 			"import PropTypes from 'prop-types';",
 			"",
 			"function ${1:MyHOC}(WrappedComponent) {",
