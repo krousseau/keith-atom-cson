@@ -66,6 +66,22 @@
 		],
 		"description": "React functional component (implicit)"
 	},
+	"React HOC": {
+		"prefix": "kr_hoc",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
+			"",
+			"function ${1:MyHOC}(WrappedComponent) {",
+			"    return class ${2:HOC} extends Component {",
+			"        render() {",
+			"            return <WrappedComponent {...this.props} />;",
+			"        }",
+			"    };",
+			"}"
+		],
+		"description": "React Higher Order Component"
+	},
 	"Promisify": {
 		"prefix": "kr_prom",
 		"body": [
