@@ -1,0 +1,84 @@
+{
+/*
+	// Place your snippets for JavaScript React here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"React setState": {
+		"prefix": "kr_ss",
+		"body": [
+			"this.setState((prevState, props) => {",
+			"$0",
+			"});"
+		],
+		"description": "React setState"
+	},
+	"React class component": {
+		"prefix": "kr_rc",
+		"body": [
+			"import React, { Component } from 'react';",
+			"import PropTypes from 'prop-types';",
+			"",
+			"export default class ${1:MyComponent} extends Component {",
+			"    static propTypes = {",
+			"    }",
+			"",
+			"    render() {",
+			"        return (",
+			"            $2",
+			"        );",
+			"    }",
+			"}"
+		],
+		"description": "React functional component"
+	},
+	"React functional component": {
+		"prefix": "kr_rfc",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
+			"",
+			"const ${1:MyComponent} = ({",
+			"    $2",
+			"}) => {",
+			"    return (",
+			"        $3",
+			"    );",
+			"};",
+			"",
+			"${1:MyComponent}.PropTypes = {",
+			"};",
+			"",
+			"export default ${1:MyComponent};"
+		],
+		"description": "React functional component"
+	},
+	"React functional component (implicit)": {
+		"prefix": "kr_rfci",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
+			"",
+			"const ${1:MyComponent} = ({",
+			"    $2",
+			"}) => (",
+			");",
+			"",
+			"${1:MyComponent}.PropTypes = {",
+			"};",
+			"",
+			"export default ${1:MyComponent};"
+		],
+		"description": "React functional component (implicit)"
+	}
+}
