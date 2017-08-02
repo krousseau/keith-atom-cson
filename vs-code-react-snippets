@@ -65,5 +65,15 @@
 			"export default ${1:MyComponent};"
 		],
 		"description": "React functional component (implicit)"
+	},
+	"Promisify": {
+		"prefix": "kr_prom",
+		"body": [
+			"return new Promise(",
+			"    function(resolve, reject) {",
+			"        $1",
+			"    });"
+		],
+		"description": "Promisify a callback"
 	}
 }
